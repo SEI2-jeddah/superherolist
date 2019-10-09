@@ -682,8 +682,8 @@ function getAll(){
   })
 
   $removeItemConent.addEventListener('click', function(e){
-   console.log(e.target.parentNode.parentNode.parentNode)
-   alert("hey ya! wake up habibi")
+   e.target.parentNode.parentNode.remove()
+   // alert("hey ya! wake up habibi")
   })
  }
 
