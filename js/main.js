@@ -663,6 +663,7 @@ function getAll(){
   $showItemConent.addEventListener('click', function(e){
    console.log(e.target.parentNode.parentNode)
    let id = e.target.parentNode.parentNode.getAttribute("data-id")
+   let $close = document.querySelector(".close")
    console.log(id)
    // alert("hey ya! wake up habibi")
 
@@ -673,6 +674,10 @@ function getAll(){
    console.log(item)
 
    $modal.style.display = "block"
+
+
+
+   $close.addEventListener('click', close)
 
   })
 
