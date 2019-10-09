@@ -624,15 +624,23 @@ function getAll(){
   // console.log(repository[index].name)
   let $gridItem = document.createElement("div")
   let $imgGridItem = document.createElement("img")
+  let $nameGridItem = document.createElement("h3")
+  let $fullNameGridItem = document.createElement("p")
 
+  $nameGridItem.textContent = repository[index].name
+  $fullNameGridItem.textContent = repository[index].biography.fullName
   $imgGridItem.setAttribute("src", repository[index].images.md )
+  $imgGridItem.setAttribute("width", "100%" )
 
   // $gridItem.setAttribute("class", "grid__item")
   $gridItem.classList.add("grid__item")
 
   
   //appending
+  
   $gridItem.appendChild($imgGridItem)
+  $gridItem.appendChild($nameGridItem)
+  $gridItem.appendChild($fullNameGridItem)
   $superHeroList.appendChild($gridItem)
  }
 
