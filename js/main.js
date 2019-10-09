@@ -635,6 +635,7 @@ function getAll(){
   $nameGridItem.textContent = repository[index].name
   $fullNameGridItem.textContent = repository[index].biography.fullName
   $imgGridItem.setAttribute("src", repository[index].images.md )
+  $gridItem.setAttribute("data-id", repository[index].id)
   $imgGridItem.setAttribute("width", "100%" )
   $showItemConent.classList.add("green__button")
   $removeItemConent.classList.add("red__button")
@@ -660,6 +661,20 @@ function getAll(){
 
 
   $showItemConent.addEventListener('click', function(e){
+   console.log(e.target.parentNode.parentNode)
+   let id = e.target.parentNode.parentNode.getAttribute("data-id")
+   console.log(id)
+   // alert("hey ya! wake up habibi")
+
+   let item = repository.find(function(el){
+     return el.id == id
+   })
+
+   console.log(item)
+
+  })
+
+  $removeItemConent.addEventListener('click', function(e){
    console.log(e.target.parentNode.parentNode.parentNode)
    alert("hey ya! wake up habibi")
   })
