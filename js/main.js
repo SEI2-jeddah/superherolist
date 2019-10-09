@@ -614,6 +614,8 @@ let superHerosRepository = (function(){
 
 let $superHeroList = document.querySelector(".superhero__list")
 
+console.log(document.querySelector("header").getAttribute("data-ebere"))
+
 function add(obj){
 
 }
@@ -655,6 +657,12 @@ function getAll(){
 
   $gridItem.appendChild($buttonContainer)
   $superHeroList.appendChild($gridItem)
+
+
+  $showItemConent.addEventListener('click', function(e){
+   console.log(e.target.parentNode.parentNode.parentNode)
+   alert("hey ya! wake up habibi")
+  })
  }
 
 }
