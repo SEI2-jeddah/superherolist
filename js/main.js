@@ -613,8 +613,8 @@ let superHerosRepository = (function(){
 ]
 
 let $superHeroList = document.querySelector(".superhero__list")
-
-console.log(document.querySelector("header").getAttribute("data-ebere"))
+let $modal = document.getElementById("myModal")
+// console.log(document.querySelector("header").getAttribute("data-ebere"))
 
 function add(obj){
 
@@ -672,6 +672,8 @@ function getAll(){
 
    console.log(item)
 
+   $modal.style.display = "block"
+
   })
 
   $removeItemConent.addEventListener('click', function(e){
@@ -680,6 +682,12 @@ function getAll(){
   })
  }
 
+}
+
+
+function close(){
+ 
+ $modal.style.display = "none"
 }
 
 return{
