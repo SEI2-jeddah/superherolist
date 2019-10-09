@@ -626,21 +626,33 @@ function getAll(){
   let $imgGridItem = document.createElement("img")
   let $nameGridItem = document.createElement("h3")
   let $fullNameGridItem = document.createElement("p")
+  let $showItemConent = document.createElement("button")
+  let $removeItemConent = document.createElement("button")
+  let $buttonContainer = document.createElement("div")
 
   $nameGridItem.textContent = repository[index].name
   $fullNameGridItem.textContent = repository[index].biography.fullName
   $imgGridItem.setAttribute("src", repository[index].images.md )
   $imgGridItem.setAttribute("width", "100%" )
+  $showItemConent.classList.add("green__button")
+  $removeItemConent.classList.add("red__button")
 
+  $showItemConent.textContent = "Show"
+  $removeItemConent.textContent = "Remove"
   // $gridItem.setAttribute("class", "grid__item")
   $gridItem.classList.add("grid__item")
 
-  
+  //<button>button info</button>
   //appending
   
   $gridItem.appendChild($imgGridItem)
   $gridItem.appendChild($nameGridItem)
   $gridItem.appendChild($fullNameGridItem)
+
+  $buttonContainer.appendChild($showItemConent)
+  $buttonContainer.appendChild($removeItemConent)
+
+  $gridItem.appendChild($buttonContainer)
   $superHeroList.appendChild($gridItem)
  }
 
