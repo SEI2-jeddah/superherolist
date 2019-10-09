@@ -19,6 +19,23 @@ header{
  width: 70%;
 }
 
+.green__button{
+ border: none;
+ background-color: green;
+ border-right: 2px solid black;
+ border-bottom: 2px solid black;
+ padding:10px;
+ border-radius: 5px;
+ display: block;
+ width: 100%;
+}
+
+.green__button:hover{
+ opacity: 0.8;
+}
+
+
+
 .grid__item{
  background-color: white;
  padding: 10px;

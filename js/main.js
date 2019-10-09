@@ -636,6 +636,7 @@ function getAll(){
   $imgGridItem.setAttribute("width", "100%" )
   $showItemConent.classList.add("green__button")
   $removeItemConent.classList.add("red__button")
+  $buttonContainer.classList.add("button__container")
 
   $showItemConent.textContent = "Show"
   $removeItemConent.textContent = "Remove"
