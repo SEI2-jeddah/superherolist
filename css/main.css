@@ -1,0 +1,24 @@
+
+body{
+ background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2013/01/14/29417/dde1749f4f17a3053898f6ec7dbecce3-700.jpg");
+ margin:0px;
+}
+
+header{
+ background-color: red;
+ text-align: center;
+ padding: 15px;
+ margin-bottom: 15px;
+}
+
+.superhero__list{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap:10px;
+}
+
+.grid__item{
+ background-color: white;
+ padding: 5px;
+ border-radius: 5px;
+}
