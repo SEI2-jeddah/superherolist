@@ -623,10 +623,16 @@ function getAll(){
  for (let index = 0; index < repository.length; index++) {
   // console.log(repository[index].name)
   let $gridItem = document.createElement("div")
-  
+  let $imgGridItem = document.createElement("img")
+
+  $imgGridItem.setAttribute("src", repository[index].images.md )
+
   // $gridItem.setAttribute("class", "grid__item")
   $gridItem.classList.add("grid__item")
 
+  
+  //appending
+  $gridItem.appendChild($imgGridItem)
   $superHeroList.appendChild($gridItem)
  }
 
