@@ -19,6 +19,9 @@ header{
  width: 70%;
 }
 
+.button__container{
+ display: flex;
+}
 .green__button{
  border: none;
  background-color: green;
@@ -28,9 +31,21 @@ header{
  border-radius: 5px;
  display: block;
  width: 100%;
+ margin-right: 5px;
 }
 
-.green__button:hover{
+.red__button{
+ border: none;
+ background-color: red;
+ border-right: 2px solid black;
+ border-bottom: 2px solid black;
+ padding:10px;
+ border-radius: 5px;
+ display: block;
+ width: 100%;
+}
+
+.green__button:hover, .red__button:hover{
  opacity: 0.8;
 }
 
