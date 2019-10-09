@@ -664,6 +664,7 @@ function getAll(){
    console.log(e.target.parentNode.parentNode)
    let id = e.target.parentNode.parentNode.getAttribute("data-id")
    let $close = document.querySelector(".close")
+   let $modalBody = document.querySelector(".modal-body")
    console.log(id)
    // alert("hey ya! wake up habibi")
 
@@ -672,11 +673,10 @@ function getAll(){
    })
 
    console.log(item)
+   let htmlContent = "<div>" + item.name + "<img src='"+ item.images.md +"'/></div>" 
 
+   $modalBody.innerHTML = htmlContent
    $modal.style.display = "block"
-
-
-
    $close.addEventListener('click', close)
 
   })
